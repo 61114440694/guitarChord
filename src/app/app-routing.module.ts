@@ -8,9 +8,21 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'main',
     pathMatch: 'full'
   },
+  {
+    path: 'main',
+    loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
+  },
+  {
+    path: 'open',
+    loadChildren: () => import('./open/open.module').then( m => m.OpenPageModule)
+  },
+  {
+    path: 'add-data/:item/:id',
+    loadChildren: () => import('./add-data/add-data.module').then( m => m.AddDataPageModule)
+  }
 ];
 
 @NgModule({

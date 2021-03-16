@@ -1,20 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <ion-slides >
+    <ion-slide *ngFor="let card of a">
+      <div style="padding-block-end: 50px;">
+        <ion-row>
+          <div>
+            <img style="width:250px;"
+              src={{card.Image}} />
+            <br />
+            <h5 style="color: rgb(255, 255, 255);font-size: 22px;"><b>{{card.name}}</b></h5>
+          </div>
+        </ion-row>
+      </div>
+    </ion-slide>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-slide *ngFor="let card of b">
+      <div>
+        <img style="width:250px;" src={{card.Image}} />
+        <a (click)="onclick()">
+          <p style="color: rgb(255, 217, 0);font-size: 30px;"><b>
+              <u>เริ่มต้นใช้งาน >></u>
+            </b></p>
+        </a>
+      </div>
+    </ion-slide>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
+  </ion-slides>
 </ion-content>

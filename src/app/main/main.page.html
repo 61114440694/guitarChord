@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <center>
+      <ion-item color="dark">
+
+        <ion-title>
+          <p style="font-size: 18px; padding: 10px;margin-left: 60px;
+            text-align: center;"><b>
+              <b>Main Chord</b>
+            </b></p>
+        </ion-title>
+      </ion-item>
+    </center>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content color="dark">
+  <center>
+    <div>
+      <ion-grid size="12">
+
+        <ion-row>
+
+          <ion-col size="2">
+            <ion-card expand="full" color="danger" *ngFor="let items of store">
+              <a (click)='go(items)'>
+                <h6 style="color: white;"><b>
+                    {{items.name}}
+                  </b></h6>
+              </a>
+            </ion-card>
+          </ion-col>
+
+
+
+
+
+
+
+          <ion-col size="2">
+
+            <div>
+              <ion-list style="background-color: rgb(37, 37, 37); width:20rem
+                ;">
+                <ion-card expand="full" color="danger" *ngFor="let ss of order">
+                  <ion-row>
+                    <ion-col>
+                      <ion-button style="margin-right: 10px;" color="danger"
+                        (click)="edit(ss.image,ss.id)"><ion-icon name="pencil-sharp">
+                        </ion-icon></ion-button>
+                    </ion-col>
+                    <ion-col>
+                      <h6 style="color: white;"><b>
+                          {{ss.id}}
+                        </b></h6></ion-col>
+                    <ion-col>
+
+                      <ion-button
+                        color="danger"
+                        (click)="delete(mySelect,ss.id)">
+                        <ion-icon name="trash-sharp"></ion-icon></ion-button>
+                    </ion-col>
+                  </ion-row>
+                  <img src={{ss.image}}/>
+                </ion-card>
+              </ion-list>
+            </div>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+    </div>
+  </center>
+
+
+
+
+</ion-content>

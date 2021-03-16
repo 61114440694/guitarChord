@@ -1,0 +1,48 @@
+<ion-header >
+  <ion-toolbar color="danger">
+    <ion-title style="text-align: center;" ><b>Edit</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-grid size="12">
+    <ion-row>
+      <ion-col size="1"></ion-col>
+
+<center>
+<ion-col size="10">
+<ion-card style="width: 325px; height:250px;padding: 30px;">
+          <ion-list>
+            <ion-item>
+              <label style="padding-right: 10px;">Name :</label>
+              <ion-input placeholder="chordname"></ion-input>
+            </ion-item>
+            <ion-item>
+              <label style="padding-right: 10px;">Image : </label>
+              <ion-input placeholder="image"></ion-input>
+            </ion-item>
+          </ion-list>
+
+          <ion-row size="12" style="padding: 15px; text-align: center;">
+            <ion-col><ion-button>Ok</ion-button>
+
+            <ion-col>
+
+              </ion-col>
+            <ion-col><ion-button (click)="cancel()">Cancel</ion-button></ion-col></ion-col>
+          </ion-row>
+        </ion-card>
+      </ion-col>
+</center>
+
+
+
+
+
+      <ion-col size="1"></ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>
